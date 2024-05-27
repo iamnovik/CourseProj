@@ -31,6 +31,35 @@
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+      <Content Include="wwwroot\lib\node_modules\.bin\md2html" />
+      <Content Include="wwwroot\lib\node_modules\.bin\md2html.cmd" />
+      <Content Include="wwwroot\lib\node_modules\.bin\md2html.ps1" />
+      <Content Include="wwwroot\lib\node_modules\.bin\nopt" />
+      <Content Include="wwwroot\lib\node_modules\.bin\nopt.cmd" />
+      <Content Include="wwwroot\lib\node_modules\.bin\nopt.ps1" />
+      <Content Include="wwwroot\lib\node_modules\.package-lock.json" />
+      <Content Include="wwwroot\lib\node_modules\abbrev\abbrev.js" />
+      <Content Include="wwwroot\lib\node_modules\abbrev\LICENSE" />
+      <Content Include="wwwroot\lib\node_modules\abbrev\package.json" />
+      <Content Include="wwwroot\lib\node_modules\abbrev\README.md" />
+      <Content Include="wwwroot\lib\node_modules\markdown\.npmignore" />
+      <Content Include="wwwroot\lib\node_modules\markdown\.travis.yml" />
+      <Content Include="wwwroot\lib\node_modules\markdown\bin\md2html.js" />
+      <Content Include="wwwroot\lib\node_modules\markdown\Changes.markdown" />
+      <Content Include="wwwroot\lib\node_modules\markdown\lib\index.js" />
+      <Content Include="wwwroot\lib\node_modules\markdown\lib\markdown.js" />
+      <Content Include="wwwroot\lib\node_modules\markdown\markdown-js.sublime-project" />
+      <Content Include="wwwroot\lib\node_modules\markdown\markdown-js.sublime-workspace" />
+      <Content Include="wwwroot\lib\node_modules\markdown\package.json" />
+      <Content Include="wwwroot\lib\node_modules\markdown\README.markdown" />
+      <Content Include="wwwroot\lib\node_modules\markdown\seed.yml" />
+      <Content Include="wwwroot\lib\node_modules\nopt\.npmignore" />
+      <Content Include="wwwroot\lib\node_modules\nopt\bin\nopt.js" />
+      <Content Include="wwwroot\lib\node_modules\nopt\examples\my-program.js" />
+      <Content Include="wwwroot\lib\node_modules\nopt\lib\nopt.js" />
+      <Content Include="wwwroot\lib\node_modules\nopt\LICENSE" />
+      <Content Include="wwwroot\lib\node_modules\nopt\package.json" />
+      <Content Include="wwwroot\lib\node_modules\nopt\README.md" />
     </ItemGroup>
 
 </Project>
