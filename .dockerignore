@@ -12,12 +12,11 @@
 **/*.dbmdl
 **/*.jfm
 **/azds.yaml
+!wwwroot/node_modules/markdown/bin
 **/bin
 **/charts
 **/docker-compose*
 **/Dockerfile*
-**/node_modules
-**/npm-debug.log
 **/obj
 **/secrets.dev.yaml
 **/values.dev.yaml

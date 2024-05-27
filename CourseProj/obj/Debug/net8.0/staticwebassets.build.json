@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7P+cvb3lg+O1qOqacViZVEzLfdwqn+EZbUiH8qx3574=",
+  "Hash": "OabOq8GACk6rZ6qX8sK0tvxTuQG7ld6jLSQAKdtzbOY=",
   "Source": "CourseProj",
   "BasePath": "_content/CourseProj",
   "Mode": "Default",
@@ -1271,25 +1271,6 @@
       "OriginalItemSpec": "wwwroot\\images\\heart-red.png"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\MicrosoftTeams-image (10).png",
-      "SourceId": "CourseProj",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
-      "BasePath": "_content/CourseProj",
-      "RelativePath": "images/MicrosoftTeams-image (10).png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\MicrosoftTeams-image (10).png"
-    },
-    {
       "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\placeholder.jpg",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
@@ -1307,25 +1288,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\placeholder.jpg"
-    },
-    {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\tg_image_2185993861 (2).jpeg",
-      "SourceId": "CourseProj",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
-      "BasePath": "_content/CourseProj",
-      "RelativePath": "images/tg_image_2185993861 (2).jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\tg_image_2185993861 (2).jpeg"
     },
     {
       "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\js\\databaseUpdates.js",
@@ -2487,12 +2449,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\.bin\\md2html",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\md2html",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/.bin/md2html",
+      "RelativePath": "node_modules/.bin/md2html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2503,15 +2465,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\.bin\\md2html"
+      "OriginalItemSpec": "wwwroot\\node_modules\\.bin\\md2html"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\.bin\\md2html.cmd",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\md2html.cmd",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/.bin/md2html.cmd",
+      "RelativePath": "node_modules/.bin/md2html.cmd",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2522,15 +2484,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\.bin\\md2html.cmd"
+      "OriginalItemSpec": "wwwroot\\node_modules\\.bin\\md2html.cmd"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\.bin\\md2html.ps1",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\md2html.ps1",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/.bin/md2html.ps1",
+      "RelativePath": "node_modules/.bin/md2html.ps1",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2541,15 +2503,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\.bin\\md2html.ps1"
+      "OriginalItemSpec": "wwwroot\\node_modules\\.bin\\md2html.ps1"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\.bin\\nopt",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\nopt",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/.bin/nopt",
+      "RelativePath": "node_modules/.bin/nopt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2560,15 +2522,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\.bin\\nopt"
+      "OriginalItemSpec": "wwwroot\\node_modules\\.bin\\nopt"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\.bin\\nopt.cmd",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\nopt.cmd",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/.bin/nopt.cmd",
+      "RelativePath": "node_modules/.bin/nopt.cmd",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2579,15 +2541,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\.bin\\nopt.cmd"
+      "OriginalItemSpec": "wwwroot\\node_modules\\.bin\\nopt.cmd"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\.bin\\nopt.ps1",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\nopt.ps1",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/.bin/nopt.ps1",
+      "RelativePath": "node_modules/.bin/nopt.ps1",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2598,15 +2560,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\.bin\\nopt.ps1"
+      "OriginalItemSpec": "wwwroot\\node_modules\\.bin\\nopt.ps1"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\.package-lock.json",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.package-lock.json",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/.package-lock.json",
+      "RelativePath": "node_modules/.package-lock.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2617,15 +2579,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\.package-lock.json"
+      "OriginalItemSpec": "wwwroot\\node_modules\\.package-lock.json"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\abbrev\\abbrev.js",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\abbrev.js",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/abbrev/abbrev.js",
+      "RelativePath": "node_modules/abbrev/abbrev.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2636,15 +2598,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\abbrev\\abbrev.js"
+      "OriginalItemSpec": "wwwroot\\node_modules\\abbrev\\abbrev.js"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\abbrev\\LICENSE",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\LICENSE",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/abbrev/LICENSE",
+      "RelativePath": "node_modules/abbrev/LICENSE",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2655,15 +2617,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\abbrev\\LICENSE"
+      "OriginalItemSpec": "wwwroot\\node_modules\\abbrev\\LICENSE"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\abbrev\\package.json",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\package.json",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/abbrev/package.json",
+      "RelativePath": "node_modules/abbrev/package.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2674,15 +2636,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\abbrev\\package.json"
+      "OriginalItemSpec": "wwwroot\\node_modules\\abbrev\\package.json"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\abbrev\\README.md",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\README.md",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/abbrev/README.md",
+      "RelativePath": "node_modules/abbrev/README.md",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2693,15 +2655,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\abbrev\\README.md"
+      "OriginalItemSpec": "wwwroot\\node_modules\\abbrev\\README.md"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\.npmignore",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\.npmignore",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/.npmignore",
+      "RelativePath": "node_modules/markdown/.npmignore",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2712,15 +2674,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\.npmignore"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\.npmignore"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\.travis.yml",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\.travis.yml",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/.travis.yml",
+      "RelativePath": "node_modules/markdown/.travis.yml",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2731,15 +2693,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\.travis.yml"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\.travis.yml"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\bin\\md2html.js",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\bin\\md2html.js",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/bin/md2html.js",
+      "RelativePath": "node_modules/markdown/bin/md2html.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2750,15 +2712,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\bin\\md2html.js"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\bin\\md2html.js"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\Changes.markdown",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\Changes.markdown",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/Changes.markdown",
+      "RelativePath": "node_modules/markdown/Changes.markdown",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2769,15 +2731,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\Changes.markdown"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\Changes.markdown"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\lib\\index.js",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\lib\\index.js",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/lib/index.js",
+      "RelativePath": "node_modules/markdown/lib/index.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2788,15 +2750,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\lib\\index.js"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\lib\\index.js"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\lib\\markdown.js",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\lib\\markdown.js",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/lib/markdown.js",
+      "RelativePath": "node_modules/markdown/lib/markdown.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2807,15 +2769,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\lib\\markdown.js"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\lib\\markdown.js"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\markdown-js.sublime-project",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\markdown-js.sublime-project",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/markdown-js.sublime-project",
+      "RelativePath": "node_modules/markdown/markdown-js.sublime-project",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2826,15 +2788,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\markdown-js.sublime-project"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\markdown-js.sublime-project"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\markdown-js.sublime-workspace",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\markdown-js.sublime-workspace",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/markdown-js.sublime-workspace",
+      "RelativePath": "node_modules/markdown/markdown-js.sublime-workspace",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2845,15 +2807,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\markdown-js.sublime-workspace"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\markdown-js.sublime-workspace"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\package.json",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\package.json",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/package.json",
+      "RelativePath": "node_modules/markdown/package.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2864,15 +2826,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\package.json"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\package.json"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\README.markdown",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\README.markdown",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/README.markdown",
+      "RelativePath": "node_modules/markdown/README.markdown",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2883,15 +2845,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\README.markdown"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\README.markdown"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\markdown\\seed.yml",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\seed.yml",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/markdown/seed.yml",
+      "RelativePath": "node_modules/markdown/seed.yml",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2902,15 +2864,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\markdown\\seed.yml"
+      "OriginalItemSpec": "wwwroot\\node_modules\\markdown\\seed.yml"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\nopt\\.npmignore",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\.npmignore",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/nopt/.npmignore",
+      "RelativePath": "node_modules/nopt/.npmignore",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2921,15 +2883,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\nopt\\.npmignore"
+      "OriginalItemSpec": "wwwroot\\node_modules\\nopt\\.npmignore"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\nopt\\bin\\nopt.js",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\bin\\nopt.js",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/nopt/bin/nopt.js",
+      "RelativePath": "node_modules/nopt/bin/nopt.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2940,15 +2902,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\nopt\\bin\\nopt.js"
+      "OriginalItemSpec": "wwwroot\\node_modules\\nopt\\bin\\nopt.js"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\nopt\\examples\\my-program.js",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\examples\\my-program.js",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/nopt/examples/my-program.js",
+      "RelativePath": "node_modules/nopt/examples/my-program.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2959,15 +2921,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\nopt\\examples\\my-program.js"
+      "OriginalItemSpec": "wwwroot\\node_modules\\nopt\\examples\\my-program.js"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\nopt\\lib\\nopt.js",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\lib\\nopt.js",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/nopt/lib/nopt.js",
+      "RelativePath": "node_modules/nopt/lib/nopt.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2978,15 +2940,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\nopt\\lib\\nopt.js"
+      "OriginalItemSpec": "wwwroot\\node_modules\\nopt\\lib\\nopt.js"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\nopt\\LICENSE",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\LICENSE",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/nopt/LICENSE",
+      "RelativePath": "node_modules/nopt/LICENSE",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2997,15 +2959,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\nopt\\LICENSE"
+      "OriginalItemSpec": "wwwroot\\node_modules\\nopt\\LICENSE"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\nopt\\package.json",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\package.json",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/nopt/package.json",
+      "RelativePath": "node_modules/nopt/package.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3016,15 +2978,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\nopt\\package.json"
+      "OriginalItemSpec": "wwwroot\\node_modules\\nopt\\package.json"
     },
     {
-      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\node_modules\\nopt\\README.md",
+      "Identity": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\README.md",
       "SourceId": "CourseProj",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\",
       "BasePath": "_content/CourseProj",
-      "RelativePath": "lib/node_modules/nopt/README.md",
+      "RelativePath": "node_modules/nopt/README.md",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3035,7 +2997,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\node_modules\\nopt\\README.md"
+      "OriginalItemSpec": "wwwroot\\node_modules\\nopt\\README.md"
     }
   ]
 }
