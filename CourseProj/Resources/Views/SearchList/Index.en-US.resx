@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <data name="TableName" xml:space="preserve">
+        <value>Name</value>
+    </data>
+    <data name="TableCollection" xml:space="preserve">
+        <value>Collection</value>
+    </data>
+    <data name="TableAuthor" xml:space="preserve">
+        <value>Author</value>
+    </data>
+
+   
+</root>

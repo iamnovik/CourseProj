@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <data name="CollectionName" xml:space="preserve">
+        <value>Name</value>
+    </data>
+    <data name="CollectionDescription" xml:space="preserve">
+        <value>Description</value>
+    </data>
+    <data name="CollectionAuthor" xml:space="preserve">
+        <value>Author</value>
+    </data>
+    <data name="CollectionImage" xml:space="preserve">
+        <value>Image</value>
+    </data>
+    <data name="CreateButton" xml:space="preserve">
+        <value>Create</value>
+    </data>
+    <data name="DeleteButton" xml:space="preserve">
+        <value>Delete</value>
+    </data>
+    <data name="CollectionCategory" xml:space="preserve">
+        <value>Category</value>
+    </data>
+    <data name="FieldType" xml:space="preserve">
+        <value>FieldType</value>
+    </data>
+    <data name="FieldName" xml:space="preserve">
+        <value>FieldName</value>
+    </data>
+    <data name="PageName" xml:space="preserve">
+        <value>Profile</value>
+    </data>
+    <data name="ButtonText" xml:space="preserve">
+        <value>Submit</value>
+    </data>
+    <data name="FieldString" xml:space="preserve">
+        <value>String</value>
+    </data>
+    <data name="FieldMultilineText" xml:space="preserve">
+        <value>MultiLineText</value>
+    </data>
+    <data name="FieldBool" xml:space="preserve">
+        <value>Yes/No</value>
+    </data>
+    <data name="FieldDate" xml:space="preserve">
+        <value>Date</value>
+    </data>
+    <data name="FieldNumber" xml:space="preserve">
+        <value>Number</value>
+    </data>
+</root>

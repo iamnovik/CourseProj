@@ -1,0 +1,201 @@
+﻿@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<AppUser>
+
+@{
+    var roles = await UserManager.GetUsersInRoleAsync("Admin");
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>UserTable</title>
+    <style>
+   
+        #giveAdminBtn, #unblockBtn {
+            background-color: green; 
+            color: white; 
+            
+        }
+        
+        #deleteBtn, #takeAdminBtn, #blockBtn {
+                    background-color: red; 
+                    color: white;
+                
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="toolbar">
+    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        <button id="giveAdminBtn" >@Localizer["GiveAdminButton"]</button>
+        <button id="takeAdminBtn">@Localizer["TakeAdminButton"]</button>
+        <button id="unblockBtn">@Localizer["UnblockButton"]</button>
+        <button id="blockBtn" >@Localizer["BlockButton"]</button>
+        <button id="deleteBtn" >@Localizer["DeleteButton"]</button>
+    }
+
+</div>
+<table id="userTable" class="table">
+    <thead>
+    <tr>
+        <th><input type="checkbox" id="selectAll"></th>
+        <th>@Localizer["TableName"]<i class="arrow"></i></th>
+        <th>@Localizer["TableEmail"]<i class="arrow"></i></th>
+        <th>@Localizer["TableAdmin"]<i class="arrow"></i></th>
+        <th>@Localizer["TableBlocked"]<i class="arrow"></i></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr id="@user.Id">
+            <td><input type="checkbox" class="userCheckbox" data-id="@user.Id"></td>
+            <td>@user.Name</td>
+            <td>@user.Email</td>
+            <td>@roles.Contains(@user)</td>
+            <td>@user.IsBlocked</td>     
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+
+</div>
+</body>
+</html>
+@section Scripts
+{
+    <script src="~/js/sort.js"></script>
+    <script src="~/js/tableClick.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#selectAll').click(function () {
+                            $('.userCheckbox').prop('checked', $(this).prop('checked'));
+             });
+            
+
+            $(".userCheckbox").click(function(event) {
+                event.stopPropagation();
+            });
+            
+            $('#giveAdminBtn').click(function () {
+                                
+                var selectedUsers = $('.userCheckbox:checked').map(function () {
+                                    return $(this).data('id');
+                }).get();
+                                
+                $.ajax({
+                    url: '/User/GiveAdminRole',
+                    method: 'POST',
+                    data: { userIds: selectedUsers },
+                    success: function (data) {
+                                        // Обновляем страницу или выполняем другие действия после успешного выполнения запроса
+                        location.reload();
+                    },
+                    error: function (xhr, status, error) {
+                                        // Обрабатываем ошибку
+                        console.error(error);
+                    }
+                });
+                                
+            });
+            
+            $('#blockBtn').click(function () {
+                                            
+                            var selectedUsers = $('.userCheckbox:checked').map(function () {
+                                                return $(this).data('id');
+                            }).get();
+                                            
+                            $.ajax({
+                                url: '/User/BlockUsers',
+                                method: 'POST',
+                                data: { userIds: selectedUsers },
+                                success: function (data) {
+                                                    // Обновляем страницу или выполняем другие действия после успешного выполнения запроса
+                                    location.reload();
+                                },
+                                error: function (xhr, status, error) {
+                                                    // Обрабатываем ошибку
+                                    console.error(error);
+                                }
+                            });
+                                            
+                        });
+            
+            $('#unblockBtn').click(function () {
+                                            
+                            var selectedUsers = $('.userCheckbox:checked').map(function () {
+                                                return $(this).data('id');
+                            }).get();
+                                            
+                            $.ajax({
+                                url: '/User/UnblockUsers',
+                                method: 'POST',
+                                data: { userIds: selectedUsers },
+                                success: function (data) {
+                                                    // Обновляем страницу или выполняем другие действия после успешного выполнения запроса
+                                    location.reload();
+                                },
+                                error: function (xhr, status, error) {
+                                                    // Обрабатываем ошибку
+                                    console.error(error);
+                                }
+                            });
+                                            
+                        });
+            
+            $('#takeAdminBtn').click(function () {
+                                            
+                            var selectedUsers = $('.userCheckbox:checked').map(function () {
+                                                return $(this).data('id');
+                            }).get();
+                                            
+                            $.ajax({
+                                url: '/User/TakeAdminRole',
+                                method: 'POST',
+                                data: { userIds: selectedUsers },
+                                success: function (data) {
+                                                    // Обновляем страницу или выполняем другие действия после успешного выполнения запроса
+                                    location.reload();
+                                },
+                                error: function (xhr, status, error) {
+                                                    // Обрабатываем ошибку
+                                    console.error(error);
+                                }
+                            });
+                                            
+                        });
+            
+            $('#deleteBtn').click(function () {
+                                            
+                            var selectedUsers = $('.userCheckbox:checked').map(function () {
+                                                return $(this).data('id');
+                            }).get();
+                                            
+                            $.ajax({
+                                url: '/User/DeleteUsers',
+                                method: 'POST',
+                                data: { userIds: selectedUsers },
+                                success: function (data) {
+                                                    // Обновляем страницу или выполняем другие действия после успешного выполнения запроса
+                                    location.reload();
+                                },
+                                error: function (xhr, status, error) {
+                                                    // Обрабатываем ошибку
+                                    console.error(error);
+                                }
+                            });
+                                            
+                        });
+        });
+       
+    </script>
+}

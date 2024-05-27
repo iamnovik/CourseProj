@@ -1,0 +1,122 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --link-color: blue;
+  --nav-bg-color: white;
+  --nav-text-color: black;
+  --button-bg-color: lightgray;
+  --form-bg-color:white;
+}
+
+.dark-theme {
+  --bg-color: rgba(0, 0, 0, 0.71);
+  --text-color: white;
+  --link-color: lightblue;
+  --nav-bg-color: darkgray;
+  --nav-text-color: white;
+  --button-bg-color: gray;
+  --form-bg-color: dimgray;
+}
+
+.space-between > * + * {
+  margin-left: 10px;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.nav-link, .navbar-brand {
+  color: var(--text-color);
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--button-bg-color);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-bottom: 60px;
+}
+.card {
+  background-color: var(--form-bg-color);
+}
+
+.form-control {
+  background-color: var(--form-bg-color);
+  color: var(--text-color);
+}
+input{
+  background-color: var(--form-bg-color);
+  color: var(--text-color);
+}
+button{
+  background-color: var(--form-bg-color);
+  color: var(--text-color);
+}
+.table{
+  color: var(--text-color);
+}
+.register-form .form-check-label {
+  color: var(--text-color);
+}
+textarea{
+  background-color: var(--form-bg-color);
+  color: var(--text-color);
+}
+tbody tr:hover {
+  cursor: pointer;
+  background-color:var(--button-bg-color);
+}
+
+thead th:hover{
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+}
+
+th {
+  position: relative;
+}
+.hidden {
+  display: none;
+}
+.arrow {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.arrow-up {
+  border-bottom: 10px solid var(--text-color);
+}
+
+.arrow-down {
+  border-top: 10px solid var(--text-color);
+}
+
+th {
+  font-weight: normal;
+}
+
+th .active {
+  font-weight: bold;
+}
+

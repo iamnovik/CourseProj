@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="UsersLink" xml:space="preserve">
+        <value>Пользователи</value>
+    </data>
+    <data name="RegisterLink" xml:space="preserve">
+        <value>Зарегистрироваться</value>
+    </data>
+    <data name="LoginLink" xml:space="preserve">
+        <value>Авторизоваться</value>
+    </data>
+    <data name="SearchPlace" xml:space="preserve">
+        <value>Поиск</value>
+    </data>
+</root>

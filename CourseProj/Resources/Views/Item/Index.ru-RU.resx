@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="ItemName" xml:space="preserve">
+        <value>Название</value>
+    </data>
+    <data name="ItemDescription" xml:space="preserve">
+        <value>Описание</value>
+    </data>
+    <data name="ItemCollection" xml:space="preserve">
+        <value>Коллекция</value>
+    </data>
+    <data name="ItemLike" xml:space="preserve">
+        <value>Лайки</value>
+    </data>
+    <data name="ItemComment" xml:space="preserve">
+        <value>Комментарии</value>
+    </data>
+    <data name="ItemTag" xml:space="preserve">
+        <value>Tэги</value>
+    </data>
+    <data name="ItemAttributes" xml:space="preserve">
+        <value>Атрибуты</value>
+    </data>
+    <data name="CommentPlaceHolder" xml:space="preserve">
+        <value>Добавить комментарий...</value>
+    </data>
+    <data name="ButtonText" xml:space="preserve">
+        <value>Отправить</value>
+    </data>
+</root>

@@ -1,0 +1,213 @@
+﻿@using CourseProj.Models.Enums
+@using System.Text
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IViewLocalizer Localizer
+@model CourseProj.ViewModels.CollectionVM
+@{
+    var itemAttributes = Model.Collection.ItemsAttributes.ToList();
+    var isEditable = User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.Collection.AppUser.UserName == User.Identity.Name);
+    
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+<body>
+<div>
+    <img id="image" src="@(string.IsNullOrEmpty(Model.Collection.ImageUrl) ? "/images/placeholder.jpg" : Model.Collection.ImageUrl)" alt="@Model.Collection.Name" width="200"><br/>
+    <input type="file" id="fileInput" style="display: none;"  /><br/>
+    <button id="uploadButton">@Localizer["ImageButton"]</button>
+</div>
+<form id="uploadForm" data-id="@Model.Collection.Id" method="post" enctype="multipart/form-data" style="display: none;">
+        <input type="file" id="fileInputHidden" name="imageFile" />
+    </form>
+<label for="collectionName" style="font-weight: bold;font-size: 20px;">@Localizer["CollectionName"]: </label>
+<input type="text" id="collectionName" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 20px;" value="@Model.Collection.Name" data-id="@Model.Collection.Id" onchange="updateCollectionName(this)" @(isEditable ? "" : "readonly disabled")>
+<br/>
+
+<label for="collectionDescription" style="font-weight: bold;font-size: 20px;">@Localizer["CollectionDescription"]: </label>
+
+<textarea id="collectionDescription" 
+          style="width: 100%; height: 100px;font-family: Arial, sans-serif; font-weight: bold; font-size: 20px;" 
+          data-id="@Model.Collection.Id" 
+          onchange="updateCollectionDescription(this)"
+@(isEditable ? "" : "readonly disabled")>@Model.Collection.Description</textarea>
+<div id="markdownPreview" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px;">
+    
+</div>
+<h2 id="authorName" >
+    @Localizer["CollectionAuthor"]: <a href="/Profile/Index/@Model.Collection.AppUser.Id">@Model.Collection.AppUser.Name</a>
+</h2>
+
+<div class="toolbar">
+    @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || @Model.Collection.AppUser.UserName == User.Identity.Name))
+    {
+        <button id="createBtn" class="btn btn-danger">@Localizer["CreateButton"]</button>
+        <button id="deleteBtn" class="btn btn-warning">@Localizer["DeleteButton"]</button>
+    }
+</div>
+<div  class="row d-flex align-items-center justify-content-center mt-4">
+            <div class="col-md-8 card p-3">
+                <form id="itemForm" style="@(ViewBag.Show ? "" : "display: none")"  asp-action="CreateItemVM" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="@Model.Collection.Id" />
+                    <input type="hidden" name="collectionJson" value='@Json.Serialize(Model.Collection)' />
+                    <div>
+                        <label asp-for="ItemForm.Name" class="control-label">@Localizer["CollectionName"]</label>
+                        <input asp-for="ItemForm.Name" class="form-control" />
+                        <span asp-validation-for="ItemForm.Name" class="text-danger"></span>
+                    </div>
+                    @for (var i = 0; i < @itemAttributes.Count; i++)
+                    {
+                        var attribute = @itemAttributes[i].Attribute;
+                        var fieldValue = $"ItemForm.Fields[{i}]";
+                    
+                        <div>
+                            <label for="@fieldValue" class="control-label">@itemAttributes[i].Attribute.Name</label>
+                    
+                            @if (attribute.Type == "checkbox")
+                            {
+                                <br/><input type="checkbox" id="@fieldValue" name="@fieldValue" class="form-check-input" value="true" />
+                                <input type="hidden"  name="@fieldValue" value="false" />
+                                
+                            }
+                            else if(attribute.Type =="multilineText")
+                            {
+                                <textarea name ="@fieldValue" class="form-control" required pattern="\S.*"></textarea>
+                            }
+                            else
+                            {
+                                <input type="@itemAttributes[i].Attribute.Type" id="@fieldValue" name="@fieldValue" class="form-control" required pattern="\S.*" />
+                            }
+                    
+                            <span class="text-danger" data-valmsg-for="@fieldValue" data-valmsg-replace="true"></span>
+                        </div>
+                    }
+                   
+                    <div>
+                        <input type="submit" value="@Localizer["ButtonText"]" class="btn btn-primary mt-3" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+<table id="itemTable" class="table">
+    <thead>
+    <tr >
+        <th><input type="checkbox" id="selectAll"></th>
+        <th>@Localizer["CollectionName"] <i class="arrow"></i></th>
+        @if (Model.Collection.ItemsAttributes.Any())
+        {
+            foreach (var itemAttribute in @itemAttributes)
+            {
+                <th>@itemAttribute.Attribute.Name <i class="arrow"></i></th>
+            }
+        }
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Collection.Items)
+    {
+        
+        <tr id="@item.Id">
+            <td><input type="checkbox" class="trCheckbox" data-id="@item.Id"></td>
+            <td><text type="text" data-id="@item.Id" >@item.Name</text></td>
+            @foreach (var value in item.ItemsAttributes)
+            {
+                <td>@value.Value</td>
+            }
+        </tr>
+     
+            
+        
+    }
+    </tbody>
+</table>
+
+</body>
+</html>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/tableClick.js"></script>
+    <script src="~/js/sort.js"></script>
+    <script>
+        
+        function updateCollectionDescription(textarea) {
+
+             updateCollectionDescriptionDb(textarea)
+             updateCollectionDescriptionHTML(textarea)
+        }
+        function updateCollectionDescriptionHTML(textarea){
+                var markdownText = textarea.value;
+                var htmlContent = markdown.toHTML(markdownText);
+                document.getElementById('markdownPreview').innerHTML = htmlContent;
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+                var textarea = document.getElementById('collectionDescription');
+                updateCollectionDescriptionHTML(textarea);
+        });
+        
+        $(document).ready(function () {
+            // Select/deselect all checkboxes
+
+            
+            document.getElementById('uploadButton').addEventListener('click', function () {
+                                document.getElementById('fileInput').click();
+                            });
+                    
+                            document.getElementById('fileInput').addEventListener('change', function () {
+                                var fileInput = document.getElementById('fileInput');
+                                var fileInputHidden = document.getElementById('fileInputHidden');
+                                fileInputHidden.files = fileInput.files;
+            
+                                            var filePath = fileInput.value;
+                                            var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+                                            
+                                            if (!allowedExtensions.exec(filePath)) {
+                                                alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+                                                fileInput.value = '';
+                                                return false;
+                                            }
+                                var form = document.getElementById('uploadForm');
+                                var formData = new FormData(form);
+                                formData.append("id", form.dataset.id);
+                                updateCollectionImage(formData);
+                                
+                                
+                            });
+                        
+                            
+
+            
+            // Button handlers
+            $('#createBtn').click(function () {
+                   
+                    $('#itemForm').show(); // Показать форму при клике на кнопку
+                });
+            
+            
+            $('#deleteBtn').click(function () {
+                var selectedItems = $('.trCheckbox:checked').map(function () {
+                    return $(this).data('id');
+                }).get();
+                
+                $.ajax({
+                    url: '/Item/DeleteItems',
+                    method: 'POST',
+                    data: { itemIds: selectedItems },
+                    success: function (data) {
+                        // Обновляем страницу или выполняем другие действия после успешного выполнения запроса
+                        location.reload();
+                    },
+                    error: function (xhr, status, error) {
+                        // Обрабатываем ошибку
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="5 Latest Items" xml:space="preserve">
+        <value>5 последних добавленных айтема</value>
+    </data>
+    <data name="5 Biggest Collections" xml:space="preserve">
+        <value>5 самых больших коллекций</value>
+    </data>
+    <data name="TableName" xml:space="preserve">
+        <value>Название</value>
+    </data>
+    <data name="TableCollection" xml:space="preserve">
+        <value>Коллекция</value>
+    </data>
+    <data name="TableAuthor" xml:space="preserve">
+        <value>Автор</value>
+    </data>
+    <data name="TableCount" xml:space="preserve">
+        <value>Количество</value>
+    </data>
+</root>

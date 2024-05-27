@@ -1,0 +1,96 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model CourseProj.ViewModels.HomeVM
+@inject IViewLocalizer Localizer
+
+<html>
+
+<h2>@Localizer["5 Latest Items"]</h2>
+    <table id="itemTable" class="table">
+        <thead>
+        <tr>
+            <th>@Localizer["TableName"] <i class="arrow"></i></th>
+            <th>@Localizer["TableCollection"] <i class="arrow"></i></th>
+            <th>@Localizer["TableAuthor"] <i class="arrow"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.LatestItems)
+        {
+            <tr id="@item.Id">
+                <td>@item.Name</td>
+                <td><a href="/Collection/Index/@item.Collection.Id">@item.Collection.Name</a></td>
+                <td><a href="/Profile/Index/@item.Collection.AppUserId">@item.Collection.AppUser.Name</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+<h2>@Localizer["5 Biggest Collections"]</h2>
+
+    <table id="collectionTable" class="table">
+        <thead>
+        <tr >
+            <th>@Localizer["TableName"] <i class="arrow"></i></th>
+            <th>@Localizer["TableCount"] <i class="arrow"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var collection in Model.LargestCollections)
+        {
+            <tr id="@collection.Id">
+                <td>@collection.Name</td>
+                <td>@collection.Items.Count</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+<div id="tagsCanvasContainer">
+    <canvas height="300" id="tagsCanvas">
+        <p>Anything in here will be replaced on browsers that support the canvas element</p>
+        <div id="tags">
+            <ul>
+                @foreach (var tag in Model.Tags)
+                {
+                    <li><a href="/SearchList/SearchTag?tagId=@tag.Id" class="tag" data-tag="@tag.Id">#@tag.Name</a></li>
+                }
+            </ul>
+        </div>
+
+    </canvas>
+</div>
+</html>
+
+@section Scripts {
+    <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+    <script src="~/js/tableClick.js"></script>
+    <script src="~/js/sort.js"></script>
+    <script>
+        
+        window.onload = function() {
+                try {
+                  TagCanvas.Start('tagsCanvas','tags',{
+                    textColour: '#b00f0f',
+                    outlineColour: '#ff00ff',
+                    reverse: true,
+                    depth: 0.8,
+                    maxSpeed: 0.07
+                  });
+                } catch(e) {
+                  // something went wrong, hide the canvas container
+                  document.getElementById('tagsCanvasContainer').style.display = 'none';
+                }
+              };
+        function adjustCanvasWidth() {
+                    var canvas = document.getElementById('tagsCanvas');
+                    canvas.width = canvas.parentElement.clientWidth;
+                }
+        
+                // Adjust canvas size on window resize
+                window.addEventListener('resize', adjustCanvasWidth);
+        
+                // Initial adjustment
+                adjustCanvasWidth();
+        
+    </script>
+}

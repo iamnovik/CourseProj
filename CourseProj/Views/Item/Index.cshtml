@@ -1,0 +1,318 @@
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IViewLocalizer Localizer
+@model Item
+@{
+    var isAuthenticated = User.Identity.IsAuthenticated;
+    var userId = User.Identity.IsAuthenticated ? User.FindFirst(ClaimTypes.NameIdentifier)?.Value : null;
+    var isEditable = User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.Collection.AppUser.Id == userId);
+    var isLiked = Model.Likes.Any(like => like.AppUserId == userId);
+}
+<style>
+    /* item-details.css */
+    .item-details {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .item-details label {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        .item-details input[type="text"],
+        .item-details input[type="number"],
+        .item-details input[type="date"],
+        .item-details textarea {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .item-details input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 10px;
+        }
+        
+        .item-details .like-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        .item-details .like-button img {
+            width: 32px;
+            height: 32px;
+            vertical-align: middle;
+        }
+        
+        .item-details #likesCount {
+            font-size: 20px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .item-details h2 {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+        
+        .item-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .item-details ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+
+        }
+        
+        .item-details form textarea {
+            width: 100%;
+            height: 100px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .item-details form button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .item-details form button:hover {
+            background-color: #0056b3;
+        }
+        
+        .item-details  span {
+            display: inline-block;
+            background: var(--form-bg-color);
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+    
+
+</style>
+<div class="item-details">
+    <label for="itemName" style="font-weight: bold;font-size: 20px;">@Localizer["ItemName"]:</label>
+    <input type="text" id="itemName" style=" font-family: Arial, sans-serif; font-weight: bold; font-size: 20px;" value="@Model.Name" data-id="@Model.Id" onchange="updateItemName(this)" @(isEditable ? "" : "readonly disabled")>
+    <h2>@Localizer["ItemCollection"]: <a href="/Collection/Index/@Model.Collection.Id">@Model.Collection.Name</a></h2>
+    
+    <h2>@Localizer["ItemAttributes"]: </h2>
+    <ul>
+        @foreach (var value in Model.ItemsAttributes)
+        {
+            <label for="@value.Id" style="font-weight: bold;font-size: 20px;">@value.ColllectionItemAttribute.Attribute.Name</label>
+            <td>
+                @switch (value.ColllectionItemAttribute.Attribute.Type)
+                {
+                    case "number":
+                        <input type="number" name="@value.Id" data-id="@value.Id" value="@value.Value" onchange="updateAttributeValue(this)" @(isEditable ? "" : "readonly disabled")><br>
+                        break;
+                    case "text":
+                        <input type="text" name="@value.Id" data-id="@value.Id" value="@value.Value" onchange="updateAttributeValue(this)" @(isEditable ? "" : "readonly disabled")><br>
+                        break;
+                    case "multilineText":
+                        <textarea name="@value.Id" data-id="@value.Id" onchange="updateAttributeValue(this)" @(isEditable ? "" : "readonly disabled")>@value.Value</textarea><br>
+                        break;
+                    case "checkbox":
+                        <input type="checkbox" name="@value.Id" data-id="@value.Id" @(value.Value == "true" ? "checked" : "") onchange="updateAttributeValue(this)" @(isEditable ? "" : "readonly disabled")><br>
+                        break;
+                    case "date":
+                        <input type="date" name="@value.Id" data-id="@value.Id" value="@value.Value" onchange="updateAttributeValue(this)" @(isEditable ? "" : "readonly disabled")><br>
+                        break;
+                }
+            </td>
+        }
+    </ul>
+
+    <h2>@Localizer["ItemLike"]: </h2>
+    <button id="likeButton" class="like-button" data-liked="@isLiked.ToString().ToLower()" data-item-id="@Model.Id" onclick="toggleLike(this)" @(User.Identity.IsAuthenticated ? "" : "disabled")>
+        <img id="likeIcon" src="@Url.Content(isLiked ? "~/images/heart-red.png" : "~/images/heart-gray.png")" alt="Like" />
+        </button>
+    <span id="likesCount">@Model.Likes.Count()</span>
+    
+
+    <h2>@Localizer["ItemComment"]: </h2>
+    <ul id="commentsList">
+            @foreach (var comment in Model.Comments)
+            {
+                <li>@comment.AppUser.Name: @comment.Text</li>
+            }
+        </ul>
+    @if (isAuthenticated)
+    {
+        <form asp-action="AddComment" method="post">
+            <input type="hidden" name="itemId" value="@Model.Id" />
+            <textarea name="text" style="width: 100%; height: 100px" placeholder="@Localizer["CommentPlaceHolder"]"></textarea><br>
+            <button type="submit">@Localizer["ButtonText"]</button>
+        </form>
+    }
+    <br>
+    <label for="tagsInput_@Model.Id">@Localizer["ItemTag"]: </label>
+    <div id="tagsList_@Model.Id">
+            @foreach (var tag in Model.ItemsTags)
+            {
+                <span data-id="@tag.TagId">@tag.Tag.Name
+                    <button onclick="removeTag(@Model.Id, @tag.TagId);">x</button></span>
+            }
+        </div>
+    @if (isAuthenticated)
+        {
+            <input type="text" id="tagsInput_@Model.Id" spellcheck="false" oninput="suggestTags('@Model.Id')" list="tagsSuggestions_@Model.Id" @(isEditable ? "" : "readonly disabled")>
+            <datalist id="tagsSuggestions_@Model.Id"></datalist>
+        }
+    
+    <script>
+                                        document.getElementById("tagsInput_@Model.Id").addEventListener("keydown", function(event) {
+                                            if (event.key === "Enter" || event.key === " ") {
+                                                event.preventDefault();
+                                                addTag(@Model.Id);
+                                            }
+                                        });
+                                
+                                    
+                    
+                    
+                                        
+                                    </script>
+</div>
+
+@section Scripts
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.12/signalr.min.js"></script>
+    <script>
+        function toggleLike(button) {
+                    var isLiked = $(button).data('liked') === true;
+                    var itemId = $(button).data('item-id');
+                    var action = isLiked ? "DeleteLike" : "AddLike";
+
+                    $.ajax({
+                        url: `/Item/${action}`,
+                        type: "POST",
+                        data: { itemId: itemId },
+                        success: function (response) {
+                            location.reload()                    },
+                        error: function () {
+                            alert("An error occurred while updating the like.");
+                        }
+                    });
+                }
+        function suggestTags(itemId) {
+                    var input = document.getElementById("tagsInput_" + itemId);
+                    var list = document.getElementById('tagsSuggestions_' + itemId);
+                    list.innerHTML = '';
+                    
+                    // Получение тегов из базы данных
+                    fetch('/Tag/GetTagsStartsWith/?query=' + input.value)
+                    .then(response => response.json())
+                    .then(tags => {
+                        console.log("suggest "+tags)
+                        for (var i = 0; i < tags.length; i++) {
+                            var option = document.createElement('option');
+                            option.value = tags[i];
+                            list.appendChild(option);
+                        }
+                    });
+                }
+                function addTag(itemId) {
+                    console.log(itemId)
+                    var input = document.getElementById("tagsInput_" + itemId);
+                    var list = document.getElementById('tagsList_' + itemId);
+                    console.log(input.value)
+                    $.ajax({
+                                                                                                        url: '/ItemTag/CreateItemTag',
+                                                                                                        method: 'POST',
+                                                                                                        data: {
+                                                                                                            itemId : itemId, 
+                                                                                                            tag: input.value.toString()
+                                                                                                            
+                                                                                                        },
+                                                                                 
+                                                                                                        success: function (data) {
+                                                     
+                                                                                                                 location.reload();
+                                                                                                            
+                                                                                                        },
+                                                                                                        error: function (xhr, status, error) {
+                                                                                                            // Обрабатываем ошибку
+                                                                                                            console.error(error);
+                                                                                                        }
+                                                                                                    });
+                   
+                }
+                
+                function removeTag(itemId, tagId) {
+                    console.log(itemId)
+                    console.log(tagId)
+                    // Удаление тега из базы данных
+                     $.ajax({
+                                                                                                                    url: '/ItemTag/DeleteItemTag',
+                                                                                                                    method: 'POST',
+                                                                                                                    data: {
+                                                                                                                        itemId : itemId, 
+                                                                                                                        tagId: tagId
+                                                                                                                        
+                                                                                                                    },
+                                                                                             
+                                                                                                                    success: function (data) {
+                                                                                                                            location.reload()
+                                                                                                                        
+                                                                                                                    },
+                                                                                                                    error: function (xhr, status, error) {
+                                                                                                                        // Обрабатываем ошибку
+                                                                                                                        console.error(error);
+                                                                                                                    }
+                                                                                                                });
+                    
+                }
+    </script>
+    <script>
+        $(document).ready(function () {
+                var itemId = '@Model.Id';
+                var connection = new signalR.HubConnectionBuilder().withUrl("/commentHub").build();
+        
+                connection.on("ReceiveComment", function (user, message) {
+                    var encodedMsg = user + ": " + message;
+                    var li = document.createElement("li");
+                    li.textContent = encodedMsg;
+                    document.getElementById("commentsList").appendChild(li);
+                });
+        
+                connection.start().then(function () {
+                    connection.invoke("JoinGroup", itemId).catch(function (err) {
+                        return console.error(err.toString());
+                    });
+                }).catch(function (err) {
+                    return console.error(err.toString());
+                });
+        
+        
+                window.onbeforeunload = function () {
+                    connection.invoke("LeaveGroup", itemId).catch(function (err) {
+                        return console.error(err.toString());
+                    });
+                };
+            });
+    </script>
+}

@@ -1,0 +1,413 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CourseProj.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CourseProj.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\MicrosoftTeams-image (10).png",
+      "PackagePath": "staticwebassets\\images\\MicrosoftTeams-image (10).png"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\heart-gray.png",
+      "PackagePath": "staticwebassets\\images\\heart-gray.png"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\heart-red.png",
+      "PackagePath": "staticwebassets\\images\\heart-red.png"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\placeholder.jpg",
+      "PackagePath": "staticwebassets\\images\\placeholder.jpg"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\images\\tg_image_2185993861 (2).jpeg",
+      "PackagePath": "staticwebassets\\images\\tg_image_2185993861 (2).jpeg"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\js\\databaseUpdates.js",
+      "PackagePath": "staticwebassets\\js\\databaseUpdates.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\js\\sort.js",
+      "PackagePath": "staticwebassets\\js\\sort.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\js\\tableClick.js",
+      "PackagePath": "staticwebassets\\js\\tableClick.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\md2html",
+      "PackagePath": "staticwebassets\\node_modules\\.bin"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\md2html.cmd",
+      "PackagePath": "staticwebassets\\node_modules\\.bin\\md2html.cmd"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\md2html.ps1",
+      "PackagePath": "staticwebassets\\node_modules\\.bin\\md2html.ps1"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\nopt",
+      "PackagePath": "staticwebassets\\node_modules\\.bin"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\nopt.cmd",
+      "PackagePath": "staticwebassets\\node_modules\\.bin\\nopt.cmd"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.bin\\nopt.ps1",
+      "PackagePath": "staticwebassets\\node_modules\\.bin\\nopt.ps1"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\.package-lock.json",
+      "PackagePath": "staticwebassets\\node_modules\\.package-lock.json"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\LICENSE",
+      "PackagePath": "staticwebassets\\node_modules\\abbrev"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\README.md",
+      "PackagePath": "staticwebassets\\node_modules\\abbrev\\README.md"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\abbrev.js",
+      "PackagePath": "staticwebassets\\node_modules\\abbrev\\abbrev.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\abbrev\\package.json",
+      "PackagePath": "staticwebassets\\node_modules\\abbrev\\package.json"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\.npmignore",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\.npmignore"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\.travis.yml",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\.travis.yml"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\Changes.markdown",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\Changes.markdown"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\README.markdown",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\README.markdown"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\bin\\md2html.js",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\bin\\md2html.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\lib\\index.js",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\lib\\index.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\lib\\markdown.js",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\lib\\markdown.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\markdown-js.sublime-project",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\markdown-js.sublime-project"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\markdown-js.sublime-workspace",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\markdown-js.sublime-workspace"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\package.json",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\package.json"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\markdown\\seed.yml",
+      "PackagePath": "staticwebassets\\node_modules\\markdown\\seed.yml"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\.npmignore",
+      "PackagePath": "staticwebassets\\node_modules\\nopt\\.npmignore"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\LICENSE",
+      "PackagePath": "staticwebassets\\node_modules\\nopt"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\README.md",
+      "PackagePath": "staticwebassets\\node_modules\\nopt\\README.md"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\bin\\nopt.js",
+      "PackagePath": "staticwebassets\\node_modules\\nopt\\bin\\nopt.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\examples\\my-program.js",
+      "PackagePath": "staticwebassets\\node_modules\\nopt\\examples\\my-program.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\lib\\nopt.js",
+      "PackagePath": "staticwebassets\\node_modules\\nopt\\lib\\nopt.js"
+    },
+    {
+      "Id": "D:\\ItTransition\\CourseProj\\CourseProj\\wwwroot\\node_modules\\nopt\\package.json",
+      "PackagePath": "staticwebassets\\node_modules\\nopt\\package.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CourseProj.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CourseProj.props",
+      "PackagePath": "build\\CourseProj.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CourseProj.props",
+      "PackagePath": "buildMultiTargeting\\CourseProj.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CourseProj.props",
+      "PackagePath": "buildTransitive\\CourseProj.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

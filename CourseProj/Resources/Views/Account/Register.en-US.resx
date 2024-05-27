@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="Register" xml:space="preserve">
+        <value>Register</value>
+    </data>
+    <data name="HaveAcc" xml:space="preserve">
+        <value>Have account?</value>
+    </data>
+    <data name="UserName" xml:space="preserve">
+        <value>Email</value>
+    </data>
+    <data name="UserPassword" xml:space="preserve">
+        <value>Password</value>
+    </data>
+    <data name="UserAccName" xml:space="preserve">
+        <value>Name</value>
+    </data>
+    <data name="UserConfirmPassword" xml:space="preserve">
+        <value>Confirm password</value>
+    </data>
+    <data name="ButtonText" xml:space="preserve">
+        <value>Submit</value>
+    </data>
+</root>

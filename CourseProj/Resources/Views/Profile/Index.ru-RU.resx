@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="CollectionName" xml:space="preserve">
+        <value>Название</value>
+    </data>
+    <data name="CollectionDescription" xml:space="preserve">
+        <value>Описание</value>
+    </data>
+    <data name="CollectionAuthor" xml:space="preserve">
+        <value>Автор</value>
+    </data>
+    <data name="CollectionImage" xml:space="preserve">
+        <value>Изображение</value>
+    </data>
+    <data name="CreateButton" xml:space="preserve">
+        <value>Создать</value>
+    </data>
+    <data name="DeleteButton" xml:space="preserve">
+        <value>Удалить</value>
+    </data>
+    <data name="CollectionCategory" xml:space="preserve">
+        <value>Категория</value>
+    </data>
+    <data name="FieldType" xml:space="preserve">
+        <value>Тип поля</value>
+    </data>
+    <data name="FieldName" xml:space="preserve">
+        <value>Название поля</value>
+    </data>
+    <data name="PageName" xml:space="preserve">
+        <value>Профиль</value>
+    </data>
+    <data name="ButtonText" xml:space="preserve">
+        <value>Подтвердить</value>
+    </data>
+    <data name="FieldString" xml:space="preserve">
+        <value>Текстовая строка</value>
+    </data>
+    <data name="FieldMultilineText" xml:space="preserve">
+        <value>Текстовое поле</value>
+    </data>
+    <data name="FieldBool" xml:space="preserve">
+        <value>Да/Нет</value>
+    </data>
+    <data name="FieldDate" xml:space="preserve">
+        <value>Дата</value>
+    </data>
+    <data name="FieldNumber" xml:space="preserve">
+        <value>Число</value>
+    </data>
+</root>

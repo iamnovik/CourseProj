@@ -1,0 +1,221 @@
+﻿@using CourseProj.Models.Enums
+@using Microsoft.AspNetCore.Identity
+@using System.Text
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IViewLocalizer Localizer
+@model CourseProj.ViewModels.ProfileVM
+@{
+    var user = ViewBag.User as AppUser;
+    var formHtml = new StringBuilder();
+    var fieldTypes = new List<CollectionField> { new CollectionField{DisplayName = @Localizer["FieldNumber"].Value, Value = "number"},
+        new CollectionField{DisplayName = Localizer["FieldString"].Value,Value = "text"},
+        new CollectionField{DisplayName = Localizer["FieldMultilineText"].Value,Value = "multilineText"},
+        new CollectionField{DisplayName = Localizer["FieldBool"].Value,Value = "checkbox"},
+        new CollectionField{DisplayName = Localizer["FieldDate"].Value,Value = "date"} };
+    
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Profile</title>
+
+</head>
+<body>
+    <h1>@Localizer["PageName"] @user?.Name</h1>
+<div class="toolbar">
+    @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || user.UserName == User.Identity.Name))
+    {
+        <button id="createBtn" class="btn btn-danger">@Localizer["CreateButton"]</button>
+        <button id="deleteBtn" class="btn btn-warning">@Localizer["DeleteButton"]</button>
+    }
+
+</div>
+        <div  class="row d-flex align-items-center justify-content-center mt-4">
+            <div class="col-md-8 card p-3">
+                <form id="collectionForm" style="@(ViewBag.Show ? "" : "display: none")" asp-controller="Profile" asp-action="CreateCollectionVM" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="@ViewBag.User.Id" />
+                    <div>
+                        <label asp-for="CollectionForm.Name" class="control-label">@Localizer["CollectionName"]</label>
+                        <input asp-for="CollectionForm.Name" class="form-control" />
+                        <span asp-validation-for="CollectionForm.Name" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="CollectionForm.Description" class="control-label">@Localizer["CollectionDescription"]</label>
+                        <textarea asp-for="CollectionForm.Description" class="form-control" style="width: 100%; height: 100px"></textarea>
+                        <span asp-validation-for="CollectionForm.Description" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="CollectionForm.CategoryId" class="control-label">@Localizer["CollectionCategory"]</label>
+                        <select asp-for="CollectionForm.CategoryId" class="form-control">
+                            @foreach (var category in @Model.Categories)
+                            {
+                                <option value="@category.Id">@category.Name</option>
+                            }
+                        </select>
+                        <span asp-validation-for="CollectionForm.CategoryId" class="text-danger"></span>
+                    </div>
+                     <div>
+                                            <label asp-for="CollectionForm.fieldType1" class="control-label">@Localizer["FieldType"] 1</label>
+                                            <select asp-for="CollectionForm.fieldType1" class="form-control">
+                                                @foreach (var fieldType in fieldTypes)
+                                                {
+                                                    <option value="@fieldType.Value">@fieldType.DisplayName</option>
+                                                }
+                                            </select>
+                                        </div>
+                    <div>
+                        <label asp-for="CollectionForm.fieldName1" class="control-label">@Localizer["FieldName"] 1</label>
+                        <input asp-for="CollectionForm.fieldName1" class="form-control" />
+                        <span asp-validation-for="CollectionForm.fieldName1" class="text-danger"></span>
+                    </div>
+                     <div>
+                                            <label asp-for="CollectionForm.fieldType2" class="control-label">@Localizer["FieldType"] 2</label>
+                                            <select asp-for="CollectionForm.fieldType2" class="form-control">
+                                                @foreach (var fieldType in fieldTypes)
+                                                                                                {
+                                                                                                    <option value="@fieldType.Value">@fieldType.DisplayName</option>
+                                                                                                }
+                                            </select>
+                                        </div>
+                    <div>
+                        <label asp-for="CollectionForm.fieldName2" class="control-label">@Localizer["FieldName"] 2</label>
+                        <input asp-for="CollectionForm.fieldName2" class="form-control" />
+                        <span asp-validation-for="CollectionForm.fieldName2" class="text-danger"></span>
+                    </div>
+                     <div>
+                                            <label asp-for="CollectionForm.fieldType3" class="control-label">@Localizer["FieldType"] 3</label>
+                                            <select asp-for="CollectionForm.fieldType3" class="form-control">
+                                                @foreach (var fieldType in fieldTypes)
+                                                                                                {
+                                                                                                    <option value="@fieldType.Value">@fieldType.DisplayName</option>
+                                                                                                }
+                                            </select>
+                                        </div>
+                    <div>
+                        <label asp-for="CollectionForm.fieldName3" class="control-label">@Localizer["FieldName"] 3</label>
+                        <input asp-for="CollectionForm.fieldName3" class="form-control" />
+                        <span asp-validation-for="CollectionForm.fieldName3" class="text-danger"></span>
+                    </div>
+                   
+                    <div>
+                        <label asp-for="CollectionForm.Image" class="control-label">@Localizer["CollectionImage"]</label>
+                        <input type="file" id="imageInput" asp-for="CollectionForm.Image" class="form-control" />
+                        <span asp-validation-for="CollectionForm.Image" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <input type="submit" value="@Localizer["ButtonText"]" class="btn btn-primary mt-3" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table id="collectionTable" class="table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAll"></th>
+                    <th>@Localizer["CollectionImage"]<i class="arrow"></i></th>
+                    <th>@Localizer["CollectionName"]<i class="arrow"></i></th>
+                    <th>@Localizer["CollectionDescription"]<i class="arrow"></i></th>
+                    <th>@Localizer["CollectionCategory"]<i class="arrow"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var collection in Model.Collections)
+                {
+                    <tr id="@collection.Id">
+                        <td><input type="checkbox" class="trCheckbox" data-id="@collection.Id"></td>
+                        <td>
+                                        <img src="@(string.IsNullOrEmpty(collection.ImageUrl) ? "/images/placeholder.jpg" : collection.ImageUrl)" alt="@collection.Name" width="100">
+                                    </td>
+                                <td>@collection.Name</td>
+                                <td>
+                                    <textarea id="collectionDescription" data-id="@collection.Id"
+                                              style="width: 100%; height: 100px; font-family: Arial, sans-serif; font-weight: bold; font-size: 20px;" 
+                                              class="hidden")>@collection.Description</textarea>
+                                    <div id="markdownPreview_@collection.Id" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px;">
+                                        <!-- Предварительный просмотр отформатированного Markdown будет здесь -->
+                                    </div>
+                                </td>
+                                <td>@collection.Category.Name</td>
+                                 
+                    </tr>
+                }
+            </tbody>
+        </table>
+<div>
+
+</div>
+</body>
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/tableClick.js"></script>
+    <script src="~/js/sort.js"></script>
+    <script>
+        document.getElementById('imageInput').addEventListener('change', function() {
+                    var fileInput = this;
+                    var filePath = fileInput.value;
+                    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+                    
+                    if (!allowedExtensions.exec(filePath)) {
+                        alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+                        fileInput.value = '';
+                        return false;
+                    }
+                });
+    
+        function updateCollectionDescriptionHTML(textareas){
+                        textareas.forEach(function(textarea) {
+                                var markdownText = textarea.value;
+                                var htmlContent = markdown.toHTML(markdownText);
+                                var previewId = 'markdownPreview_' + textarea.dataset.id; // Получаем Id для предварительного просмотра
+                                var previewElement = document.getElementById(previewId);
+                                if (previewElement) {
+                                    previewElement.innerHTML = htmlContent;
+                                }
+                            });
+                }
+                document.addEventListener("DOMContentLoaded", function() {
+                        var textareas = document.querySelectorAll('textarea.hidden');
+                            updateCollectionDescriptionHTML(textareas);
+                });
+    
+        $(document).ready(function () {
+            // Select/deselect all checkboxes
+            
+ 
+             
+                 
+               
+            // Button handlers
+            $('#createBtn').click(function () {
+                    
+                   $('#collectionForm').show(); // Показать форму при клике на кнопку
+                    
+                });
+            
+            
+            
+            $('#deleteBtn').click(function () {
+                var selectedCollections = $('.trCheckbox:checked').map(function () {
+                    return $(this).data('id');
+                }).get();
+                
+                $.ajax({
+                    url: '/Collection/DeleteCollections',
+                    method: 'POST',
+                    data: { collIds: selectedCollections },
+                    success: function (data) {
+                        // Обновляем страницу или выполняем другие действия после успешного выполнения запроса
+                        location.reload();
+                    },
+                    error: function (xhr, status, error) {
+                        // Обрабатываем ошибку
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+}

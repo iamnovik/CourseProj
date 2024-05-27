@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="TableName" xml:space="preserve">
+        <value>Название</value>
+    </data>
+    <data name="TableCollection" xml:space="preserve">
+        <value>Коллекция</value>
+    </data>
+    <data name="TableAuthor" xml:space="preserve">
+        <value>Автор</value>
+    </data>
+</root>

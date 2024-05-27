@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model List<Item>
+@inject IViewLocalizer Localizer
+
+<html>
+<head>
+    <title>Search List</title>
+</head>
+<body>
+<div>
+    <table id="itemTable" class="table">
+        <thead>
+        <tr>
+            <th>@Localizer["TableName"] <i class="arrow"></i></th>
+            <th>@Localizer["TableCollection"] <i class="arrow"></i></th>
+            <th>@Localizer["TableAuthor"] <i class="arrow"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="@item.Id">
+                <td>@item.Name</td>
+                <td><a href="/Collection/Index/@item.Collection.Id">@item.Collection.Name</a></td>
+                <td><a href="/Profile/Index/@item.Collection.AppUserId">@item.Collection.AppUser.Name</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+@section Scripts
+{
+    <script src="~/js/tableClick.js"></script>
+    <script src="~/js/sort.js"></script>
+}

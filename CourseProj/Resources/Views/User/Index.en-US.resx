@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <data name="TableName" xml:space="preserve">
+        <value>Name</value>
+    </data>
+    <data name="TableEmail" xml:space="preserve">
+        <value>Email</value>
+    </data>
+    <data name="TableAdmin" xml:space="preserve">
+        <value>Admin</value>
+    </data>
+    <data name="GiveAdminButton" xml:space="preserve">
+        <value>Give Admin Role</value>
+    </data>
+    <data name="TakeAdminButton" xml:space="preserve">
+        <value>Take Admin Role</value>
+    </data>
+    <data name="BlockButton" xml:space="preserve">
+        <value>Block </value>
+    </data>
+    <data name="UnblockButton" xml:space="preserve">
+        <value>Unblock</value>
+    </data>
+    <data name="DeleteButton" xml:space="preserve">
+        <value>Dekete</value>
+    </data>
+    <data name="TableBlocked" xml:space="preserve">
+        <value>Blocked</value>
+    </data>
+</root>

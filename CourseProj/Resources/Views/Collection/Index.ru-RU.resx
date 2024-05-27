@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="CollectionName" xml:space="preserve">
+        <value>Название</value>
+    </data>
+    <data name="CollectionDescription" xml:space="preserve">
+        <value>Описание</value>
+    </data>
+    <data name="CollectionAuthor" xml:space="preserve">
+        <value>Автор</value>
+    </data>
+    <data name="ImageButton" xml:space="preserve">
+        <value>Обновить изображение</value>
+    </data>
+    <data name="CreateButton" xml:space="preserve">
+        <value>Создать</value>
+    </data>
+    <data name="DeleteButton" xml:space="preserve">
+        <value>Удалить</value>
+    </data>
+    <data name="ButtonText" xml:space="preserve">
+        <value>Подтвердить</value>
+    </data>
+</root>
