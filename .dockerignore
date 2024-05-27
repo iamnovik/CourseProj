@@ -12,8 +12,9 @@
 **/*.dbmdl
 **/*.jfm
 **/azds.yaml
-!wwwroot/node_modules/markdown/bin
 **/bin
+!wwwroot/node_modules/markdown/bin/md2html.js
+!wwwroot/node_modules/nopt/bin/nopt.js
 **/charts
 **/docker-compose*
 **/Dockerfile*
