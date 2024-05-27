@@ -175,3 +175,4 @@ D:\ItTransition\CourseProj\CourseProj\obj\Debug\net8.0\CourseProj.Resources.View
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+D:\ItTransition\CourseProj\CourseProj\obj\Debug\net8.0\CourseProj.sourcelink.json
