@@ -13,8 +13,8 @@
 **/*.jfm
 **/azds.yaml
 **/bin
-!wwwroot/node_modules/markdown/bin/md2html.js
-!wwwroot/node_modules/nopt/bin/nopt.js
+!**/markdown/bin
+!**/node_modules/nopt/bin
 **/charts
 **/docker-compose*
 **/Dockerfile*
