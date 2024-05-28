@@ -3,10 +3,14 @@
 @using System.Text
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Security.Claims
 @inject IViewLocalizer Localizer
 @model CourseProj.ViewModels.ProfileVM
 @{
+    
     var user = ViewBag.User as AppUser;
+    var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    var isEditable =  user?.Id == userId;
     var formHtml = new StringBuilder();
     var fieldTypes = new List<CollectionField> { new CollectionField{DisplayName = @Localizer["FieldNumber"].Value, Value = "number"},
         new CollectionField{DisplayName = Localizer["FieldString"].Value,Value = "text"},
@@ -23,7 +27,13 @@
 
 </head>
 <body>
-    <h1>@Localizer["PageName"] @user?.Name</h1>
+<h1>@Localizer["PageName"] @user?.Name</h1>
+<div>
+    <label for="profileName" style="font-weight: bold;font-size: 20px;">@Localizer["AccountName"]: </label>
+    <input type="text" id="profileName" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 20px;" value="@user?.Name" data-id="@user?.Id" onchange="updateUserName(this)" @(isEditable ? "" : "readonly disabled")>
+</div>
+
+<br/>
 <div class="toolbar">
     @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || user.UserName == User.Identity.Name))
     {

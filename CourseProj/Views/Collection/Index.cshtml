@@ -21,7 +21,7 @@
     <img id="image" src="@(string.IsNullOrEmpty(Model.Collection.ImageUrl) ? "/images/placeholder.jpg" : Model.Collection.ImageUrl)" alt="@Model.Collection.Name" width="200"><br/>
     <input type="file" id="fileInput" style="display: none;"  /><br/>
     <button id="uploadButton">@Localizer["ImageButton"]</button>
-</div>
+</div><br/>
 <form id="uploadForm" data-id="@Model.Collection.Id" method="post" enctype="multipart/form-data" style="display: none;">
         <input type="file" id="fileInputHidden" name="imageFile" />
     </form>

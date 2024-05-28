@@ -48,4 +48,7 @@
     <data name="FieldNumber" xml:space="preserve">
         <value>Число</value>
     </data>
+    <data name="AccountName" xml:space="preserve">
+        <value>Имя аккаунта</value>
+    </data>
 </root>

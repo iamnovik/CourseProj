@@ -24,6 +24,16 @@ function updateItemName(input) {
     updateDatabase(newValue,id, "Item", "UpdateItemName");
 }
 
+function updateUserName(input) {
+
+    var newValue = input.value;
+    var id = input.dataset.id;
+    console.log(newValue)
+    console.log(id)
+    // Здесь вызывается метод обновления данных в БД
+    updateDatabase(newValue,id, "User", "UpdateUserName");
+}
+
 function updateAttributeValue(input){
     var newValue
     if (input.type === 'checkbox'){

@@ -20,4 +20,13 @@ public class  UserService(IUserRepository userRepository) : IUserService
 
         return user;
     }
+
+    public async Task<AppUser> UpdateUserName(string value, string id)
+    {
+        var user = await userRepository.GetUserById(id);
+        user.Name = value;
+        await userRepository.Update(user);
+
+        return user;
+    }
 }

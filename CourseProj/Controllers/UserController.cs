@@ -42,6 +42,15 @@ public class UserController(IUserService userService, UserManager<AppUser> userM
     }
     
     [HttpPost]
+    public async Task<IActionResult> UpdateUserName(string value, string id)
+    {
+        var userUpdated = await userService.UpdateUserName(value, id);
+        return Ok(userUpdated);
+
+
+    }
+    
+    [HttpPost]
     public async Task<IActionResult> TakeAdminRole(List<string> userIds)
     {
         foreach (var id in userIds)

@@ -49,4 +49,7 @@
     <data name="FieldNumber" xml:space="preserve">
         <value>Number</value>
     </data>
+    <data name="AccountName" xml:space="preserve">
+        <value>Account name</value>
+    </data>
 </root>
