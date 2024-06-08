@@ -1,0 +1,36 @@
+﻿@model IEnumerable<JiraIssue>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Jira Issues</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Jira Issues</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Link<i class="arrow"></i></th>
+            <th>Status<i class="arrow"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var issue in Model)
+        {
+            <tr>
+                <td><a href="@issue.Link">@issue.Link</a></td>
+                <td>@issue.Status</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+@section Scripts
+{
+    <script src="~/js/sort.js"></script>
+}

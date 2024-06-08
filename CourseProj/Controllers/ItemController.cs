@@ -15,6 +15,7 @@ public class ItemController(IItemService itemService, UserManager<AppUser> userM
     {
 
         var item = await itemService.GetItemById(id);
+        ViewBag.Collection = item.Collection!.Name;
         return View(item);
     }
     

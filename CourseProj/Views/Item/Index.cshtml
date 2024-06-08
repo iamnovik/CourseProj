@@ -145,7 +145,7 @@
             </td>
         }
     </ul>
-
+    
     <h2>@Localizer["ItemLike"]: </h2>
     <button id="likeButton" class="like-button" data-liked="@isLiked.ToString().ToLower()" data-item-id="@Model.Id" onclick="toggleLike(this)" @(User.Identity.IsAuthenticated ? "" : "disabled")>
         <img id="likeIcon" src="@Url.Content(isLiked ? "~/images/heart-red.png" : "~/images/heart-gray.png")" alt="Like" />

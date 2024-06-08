@@ -73,13 +73,22 @@ builder.Services.AddScoped<IItemAttributeService, ItemAttributeService>();
 builder.Services.AddScoped<ILikeService, LikeService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<JiraService>(serviceProvider =>
+{
+    var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+    var userService = serviceProvider.GetRequiredService<IUserService>();
+    var httpContextAccessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
+    var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
+    var user = userManager.GetUserAsync(httpContextAccessor.HttpContext.User).Result;
+
+    return new JiraService(configuration, userService, user);
+});
 var options = new DbContextOptionsBuilder<AppDbContext>()
     .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
     .Options;
 
 using (var context = new AppDbContext(options))
 {
-    context.Database.EnsureDeleted();
     context.Database.EnsureCreated();
 }
 

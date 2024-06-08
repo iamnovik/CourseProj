@@ -1,6 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-
+@using Microsoft.AspNetCore.Identity
+@using CourseProj.Models.Enums
+@inject SignInManager<AppUser> SignInManager
 <!DOCTYPE html>
 @inject IViewLocalizer Localizer
 <html lang="en">
@@ -62,13 +64,93 @@
         </nav>
     </header>
 
-
+ 
 <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
 </div>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - task4 - @if (SignInManager.IsSignedIn(User))
+                              {
+                                  <a href="#" id="help-link" data-toggle="modal" data-target="#helpModal">Помощь</a>
+                              }
+         
+    </div>
+    
+</footer>
+<div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel">Create Jira Issue</h5>
+                    <button type="button" id="modalCloseButton" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="help-form" asp-controller="Ticket" asp-action="CreateIssue" method="post">
+                        <div class="form-group">
+                            <label for="Description">Description</label>
+                            <textarea class="form-control" id="Description" name="Description" rows="4"></textarea>
+                        </div>
+                         <div class="form-group">
+                             <label for="Status">Status</label>
+                             <select class="form-control" id="Status" name="Status">
+                                 @foreach (var status in Enum.GetValues(typeof(JiraPriority)))
+                                 {
+                                     <option value="@status">@status</option>
+                                 }
+                                 </select>
+                             </div>
+                        <input type="hidden" id="Collection" name="Collection" value=""/>
+                        <input type="hidden" id="Link" name="Link"  />
+                        <button type="submit" class="btn btn-primary">Create Issue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (ViewBag.Collection != null)
+    {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var collectionElement = document.getElementById('Collection');
+            if (collectionElement) {
+                collectionElement.value = '@ViewBag.Collection';
+            }
+        });
+    </script>
+    }
+    <script>
+        document.getElementById('help-link').addEventListener('click', function() {
+            $('#helpModal').modal('show');
+            document.getElementById('Link').value = window.location.href; // Get the current URL
+        });
+        document.getElementById('modalCloseButton').addEventListener('click', function() {
+                $('#helpModal').modal('hide'); // Скрыть модальное окно
+            });
+        document.getElementById('help-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            var form = event.target;
 
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            }).then(response => {
+                if (response.ok) {
+                    alert('Issue Created Successfully!');
+                    $('#helpModal').modal('hide'); // Hide the modal
+                    form.reset(); // Reset the form fields
+                } else {
+                    alert('Failed to create issue.');
+                }
+            }).catch(error => {
+                alert('Error: ' + error.message);
+            });
+        });
+    </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 <script src="~/node_modules/markdown/lib/markdown.js"></script>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>

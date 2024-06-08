@@ -23,6 +23,7 @@ public class CollectionController(ICollectionService collectionService, IItemSer
             ItemForm = new ItemForm() // Пустая форма для заполнения
         };
         ViewBag.Show = false;
+        ViewBag.Collection = collection.Name;
         return View(viewModel);
     }
     

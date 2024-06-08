@@ -21,7 +21,7 @@
 }
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Profile</title>
 
@@ -32,13 +32,14 @@
     <label for="profileName" style="font-weight: bold;font-size: 20px;">@Localizer["AccountName"]: </label>
     <input type="text" id="profileName" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 20px;" value="@user?.Name" data-id="@user?.Id" onchange="updateUserName(this)" @(isEditable ? "" : "readonly disabled")>
 </div>
-
 <br/>
+
 <div class="toolbar">
     @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || user.UserName == User.Identity.Name))
     {
         <button id="createBtn" class="btn btn-danger">@Localizer["CreateButton"]</button>
         <button id="deleteBtn" class="btn btn-warning">@Localizer["DeleteButton"]</button>
+        <a href="@Url.Action("Index", "Ticket")" class="btn btn-primary">Перейти к задачам Jira</a>
     }
 
 </div>
