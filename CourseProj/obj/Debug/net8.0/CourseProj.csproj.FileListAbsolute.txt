@@ -176,3 +176,5 @@ D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Microsoft.AspNetCore.Conn
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
 D:\ItTransition\CourseProj\CourseProj\obj\Debug\net8.0\CourseProj.sourcelink.json
+D:\ItTransition\CourseProj\CourseProj\obj\Debug\net8.0\CourseProj.Resources.Views.Ticket.Index.en-US.resources
+D:\ItTransition\CourseProj\CourseProj\obj\Debug\net8.0\CourseProj.Resources.Views.Ticket.Index.ru-RU.resources

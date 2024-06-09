@@ -11,6 +11,7 @@
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CourseProj_002FResources_002FViews_002FShared_002F_005FLayout/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CourseProj_002FResources_002FViews_002FShared_002F_005FLoginPartial/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CourseProj_002FResources_002FViews_002FTicket_002FIndex/@EntryIndexedValue">False</s:Boolean>
 	
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CourseProj_002FResources_002FViews_002FUser_002FIndex/@EntryIndexedValue">False</s:Boolean>
