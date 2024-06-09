@@ -22,7 +22,10 @@ public class JiraService : IJiraSerivce
         _configuration = configuration;
         _jiraBaseUrl = _configuration["Jira:BaseUrl"];
         _apiToken = _configuration["Jira:ApiToken"];
-        _httpClient = new HttpClient();
+        _httpClient = new HttpClient
+        {
+            BaseAddress = new Uri(_configuration["Jira:BaseUrl"])
+        };
         _appUser = appUser;
         var authToken = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{_configuration["Jira:User"]}:{_apiToken}"));
         _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
@@ -42,7 +45,7 @@ public class JiraService : IJiraSerivce
 
     private async Task<string> GetUserAccountIdAsync(string email)
     {
-        var response = await _httpClient.GetAsync($"{_jiraBaseUrl}/rest/api/3/user/search?query={Uri.EscapeDataString(email)}");
+        var response = await _httpClient.GetAsync($"/rest/api/3/user/search?query={Uri.EscapeDataString(email)}");
         response.EnsureSuccessStatusCode();
 
         var responseBody = await response.Content.ReadAsStringAsync();
@@ -65,7 +68,7 @@ public class JiraService : IJiraSerivce
         var json = JsonConvert.SerializeObject(user);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        var response = await _httpClient.PostAsync($"{_jiraBaseUrl}/rest/api/3/user", content);
+        var response = await _httpClient.PostAsync($"/rest/api/3/user", content);
         if (!response.IsSuccessStatusCode)
         {
             var responseBodyT = await response.Content.ReadAsStringAsync();
@@ -120,7 +123,7 @@ public class JiraService : IJiraSerivce
 
         try
         {
-            var response = await _httpClient.PostAsync($"{_jiraBaseUrl}/rest/api/3/issue", content);
+            var response = await _httpClient.PostAsync($"/rest/api/3/issue", content);
         
             var responseBody = await response.Content.ReadAsStringAsync();
 
@@ -143,7 +146,7 @@ public class JiraService : IJiraSerivce
     
     public async Task<List<JiraIssue>> GetIssuesAsync()
     {
-        var response = await _httpClient.GetAsync($"{_jiraBaseUrl}/rest/api/3/search?jql=reporter={_userAccountId}");
+        var response = await _httpClient.GetAsync($"/rest/api/3/search?jql=reporter={_userAccountId}");
 
         if (!response.IsSuccessStatusCode)
         {
