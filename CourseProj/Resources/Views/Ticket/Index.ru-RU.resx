@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <data name="Link" xml:space="preserve">
+        <value>Ссылка</value>
+    </data>
+    <data name="Status" xml:space="preserve">
+        <value>Статус</value>
+    </data>
+    <data name="Issues" xml:space="preserve">
+        <value>Проблемы</value>
+    </data>
+    <data name="Success" xml:space="preserve">
+        <value>Проблема успешно добавлена</value>
+    </data>
+    <data name="Error" xml:space="preserve">
+        <value>Произошла ошибка</value>
+    </data>
+</root>
