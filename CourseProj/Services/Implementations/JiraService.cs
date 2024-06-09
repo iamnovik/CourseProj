@@ -20,16 +20,16 @@ public class JiraService : IJiraSerivce
     public JiraService(IConfiguration configuration, IUserService userService, AppUser appUser)
     {
         _configuration = configuration;
-        _jiraBaseUrl = _configuration["Jira__BaseUrl"];
+        _jiraBaseUrl = _configuration["Jira:BaseUrl"];
         Console.WriteLine(_jiraBaseUrl);
-        _apiToken = _configuration["Jira__ApiToken"];
+        _apiToken = _configuration["Jira:ApiToken"];
         Console.WriteLine(_apiToken);
         _httpClient = new HttpClient
         {
             BaseAddress = new Uri(_jiraBaseUrl)
         };
         _appUser = appUser;
-        var authToken = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{_configuration["Jira__User"]}:{_apiToken}"));
+        var authToken = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{_configuration["Jira:User"]}:{_apiToken}"));
         _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
 
         // Проверяем, существует ли пользователь
@@ -91,7 +91,7 @@ public class JiraService : IJiraSerivce
         {
             fields = new
             {
-                project = new { key = _configuration["Jira__ProjectKey"] },
+                project = new { key = _configuration["Jira:ProjectKey"] },
                 summary = "Collection: " + (collection ?? "null"),
                 description = new
                 {
