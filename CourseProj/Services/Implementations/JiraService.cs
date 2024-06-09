@@ -21,7 +21,9 @@ public class JiraService : IJiraSerivce
     {
         _configuration = configuration;
         _jiraBaseUrl = _configuration["Jira__BaseUrl"];
+        Console.WriteLine(_jiraBaseUrl);
         _apiToken = _configuration["Jira__ApiToken"];
+        Console.WriteLine(_apiToken);
         _httpClient = new HttpClient
         {
             BaseAddress = new Uri(_jiraBaseUrl)
