@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CourseProj.Controllers;
 
-public class TicketController(JiraService jiraService, UserManager<AppUser> userManager) : Controller
+public class TicketController(JiraService jiraService, UserManager<AppUser> userManager, ILogger<TicketController> _logger) : Controller
 {
     public async Task<IActionResult> Index()
     {
@@ -24,11 +24,19 @@ public class TicketController(JiraService jiraService, UserManager<AppUser> user
         {
             return Challenge();
         }
-
+        
         string email = user.Email;
         string displayName = user.UserName;
-
-        string issueKey = await jiraService.CreateIssueAsync(jiraIssueVm.Description, jiraIssueVm.Priority.ToString(), collection, link);
+        try
+        {
+            string issueKey = await jiraService.CreateIssueAsync(jiraIssueVm.Description, jiraIssueVm.Priority.ToString(), collection, link);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occurred while processing your request.");
+            return View("Error"); // Отобразить страницу ошибки
+        }
+        
         
 
         return Redirect(link);
