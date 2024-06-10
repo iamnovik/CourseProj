@@ -26,6 +26,8 @@ public class AppDbContext : IdentityDbContext<AppUser>
     
     public DbSet<Category> Categories { get; set; }
     
+    public DbSet<ApiToken> ApiTokens { get; set; }
+    
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
     {
