@@ -61,6 +61,7 @@ builder.Services.AddScoped<IItemAttributeRepository, ItemAttributeRepository>();
 builder.Services.AddScoped<ILikeRepository, LikeRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IApiTokenRepository, ApiTokenRepository>();
 
 builder.Services.AddScoped<IItemTagService, ItemTagService>();
 builder.Services.AddScoped<ITagService, TagService>();
@@ -73,6 +74,7 @@ builder.Services.AddScoped<IItemAttributeService, ItemAttributeService>();
 builder.Services.AddScoped<ILikeService, LikeService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IApiTokenService, ApiService>();
 var options = new DbContextOptionsBuilder<AppDbContext>()
     .UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
     .Options;

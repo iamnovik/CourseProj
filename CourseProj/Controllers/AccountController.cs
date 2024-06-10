@@ -1,12 +1,13 @@
 ﻿using CourseProj.Models;
 using CourseProj.Models.Enums;
+using CourseProj.Services.Interfaces;
 using CourseProj.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CourseProj.Controllers;
 
-public class AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager) : Controller
+public class AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, IApiTokenService apiTokenService) : Controller
 {
     public IActionResult Login(string? returnUrl = null)
     {
@@ -72,8 +73,8 @@ public class AccountController(SignInManager<AppUser> signInManager, UserManager
                 {
                     await userManager.AddToRoleAsync(user, Role.User.ToString());
                 }
-                
-                
+
+                await apiTokenService.AddTokenAsync(user.Id);
                 await signInManager.SignInAsync(user, false);
 
                 return RedirectToLocal(returnUrl);
