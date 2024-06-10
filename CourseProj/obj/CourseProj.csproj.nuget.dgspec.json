@@ -46,10 +46,6 @@
               "target": "Package",
               "version": "[7.0.26, )"
             },
-            "Elastic.Clients.Elasticsearch": {
-              "target": "Package",
-              "version": "[8.13.12, )"
-            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.2, )"

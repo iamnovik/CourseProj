@@ -51,4 +51,7 @@
     <data name="AccountName" xml:space="preserve">
         <value>Имя аккаунта</value>
     </data>
+    <data name="JiraIssues" xml:space="preserve">
+        <value>Мои задачи Jira</value>
+    </data>
 </root>

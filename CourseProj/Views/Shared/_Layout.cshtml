@@ -74,7 +74,7 @@
     <div class="container">
         &copy; 2024 - task4 - @if (SignInManager.IsSignedIn(User))
                               {
-                                  <a href="#" id="help-link" data-toggle="modal" data-target="#helpModal">Помощь</a>
+                                  <a href="#" id="help-link" data-toggle="modal" data-target="#helpModal">@Localizer["Help"]</a>
                               }
          
     </div>
@@ -84,7 +84,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="helpModalLabel">Create Jira Issue</h5>
+                    <h5 class="modal-title" id="helpModalLabel">@Localizer["CreateIssue"]</h5>
                     <button type="button" id="modalCloseButton" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -92,11 +92,11 @@
                 <div class="modal-body">
                     <form id="help-form" asp-controller="Ticket" asp-action="CreateIssue" method="post">
                         <div class="form-group">
-                            <label for="Description">Description</label>
+                            <label for="Description">@Localizer["IssueDescription"]</label>
                             <textarea class="form-control" id="Description" name="Description" rows="4"></textarea>
                         </div>
                          <div class="form-group">
-                             <label for="Status">Status</label>
+                             <label for="Status">@Localizer["IssuePriority"]</label>
                              <select class="form-control" id="Status" name="Status">
                                  @foreach (var status in Enum.GetValues(typeof(JiraPriority)))
                                  {
@@ -106,7 +106,7 @@
                              </div>
                         <input type="hidden" id="Collection" name="Collection" value=""/>
                         <input type="hidden" id="Link" name="Link"  />
-                        <button type="submit" class="btn btn-primary">Create Issue</button>
+                        <button type="submit" class="btn btn-primary">@Localizer["CreateIssue"]</button>
                     </form>
                 </div>
             </div>
@@ -143,11 +143,11 @@
                 body: formData
             }).then(response => {
                 if (response.ok) {
-                    alert('Issue Created Successfully!');
+                    alert('@Localizer["Success"]');
                     $('#helpModal').modal('hide'); // Hide the modal
                     form.reset(); // Reset the form fields
                 } else {
-                    alert('Failed to create issue.');
+                    alert('@Localizer["Error"]');
                 }
             }).catch(error => {
                 alert('Error: ' + error.message);

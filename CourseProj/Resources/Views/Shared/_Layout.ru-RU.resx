@@ -12,4 +12,22 @@
     <data name="SearchPlace" xml:space="preserve">
         <value>Поиск</value>
     </data>
+    <data name="Help" xml:space="preserve">
+        <value>Поддержка</value>
+    </data>
+    <data name="CreateIssue" xml:space="preserve">
+        <value>Сообщить о проблеме</value>
+    </data>
+    <data name="IssueDescription" xml:space="preserve">
+        <value>Описание</value>
+    </data>
+    <data name="IssuePriority" xml:space="preserve">
+        <value>Приоритет</value>
+    </data>
+    <data name="Success" xml:space="preserve">
+        <value>Проблема успешно добавлена</value>
+    </data>
+    <data name="Error" xml:space="preserve">
+        <value>Произошла ошибка</value>
+    </data>
 </root>

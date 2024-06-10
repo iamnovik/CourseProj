@@ -1,5 +1,6 @@
-﻿@model IEnumerable<JiraIssue>
-
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model IEnumerable<JiraIssue>
+@inject IViewLocalizer Localizer
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,12 @@
 </head>
 <body>
 <div class="container mt-5">
-    <h2>Jira Issues</h2>
+    <h2>@Localizer["Issues"]</h2>
     <table class="table">
         <thead>
         <tr>
-            <th>Link<i class="arrow"></i></th>
-            <th>Status<i class="arrow"></i></th>
+            <th>@Localizer["Link"]<i class="arrow"></i></th>
+            <th>@Localizer["Status"]<i class="arrow"></i></th>
         </tr>
         </thead>
         <tbody>

@@ -142,8 +142,6 @@ D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\AWSSDK.Core.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\AWSSDK.S3.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Bsa.Search.Core.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Elastic.Clients.Elasticsearch.dll
-D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Elastic.Transport.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\Npgsql.Json.NET.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\en-US\CourseProj.resources.dll
 D:\ItTransition\CourseProj\CourseProj\bin\Debug\net8.0\ru-RU\CourseProj.resources.dll

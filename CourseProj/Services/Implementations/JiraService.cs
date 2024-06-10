@@ -169,7 +169,7 @@ public class JiraService : IJiraSerivce
             issues.Add(new JiraIssue
             {
                 Link = issueLink,
-                Status = Enum.TryParse<JiraStatus>(issue.fields.status.name.ToString(), out JiraStatus status) ? status : JiraStatus.ToDo
+                Status = issue.fields.status.name.ToString()
             });
         }
 

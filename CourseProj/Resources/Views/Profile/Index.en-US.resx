@@ -52,4 +52,7 @@
     <data name="AccountName" xml:space="preserve">
         <value>Account name</value>
     </data>
+    <data name="JiraIssues" xml:space="preserve">
+        <value>My Jira Issues</value>
+    </data>
 </root>
