@@ -5,6 +5,6 @@ namespace CourseProj.Models.Enums;
 public enum JiraPriority
 {
     High,
-    Mid,
+    Medium,
     Low
 }
