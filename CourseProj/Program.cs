@@ -90,6 +90,7 @@ var options = new DbContextOptionsBuilder<AppDbContext>()
 
 using (var context = new AppDbContext(options))
 {
+    context.Database.EnsureDeleted();
     context.Database.EnsureCreated();
 }
 
